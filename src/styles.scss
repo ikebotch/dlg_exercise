@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: oswald;
+  src: url(assets/fonts/oswald-bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: oswald;
+  src: url(assets/fonts/oswald-light.ttf) format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: oswald;
+  src: url(assets/fonts/oswald-regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
+// Set default font to oswald
+* {
+  font-family: oswald;
+}

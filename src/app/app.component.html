@@ -1,0 +1,39 @@
+<div>
+    <!-- Title -->
+
+    <div id="header">Have a question? We can help</div>
+
+    <!-- Title End -->
+
+    <!-- Accordian -->
+
+    <ng-container *ngFor="let item of (faqData | async), let i = index">
+        <div class="faq-wrapper">
+            <div class="faq-question-wrapper" [class.faq-active]="(currentFaqIndex | async) === i">
+                <div class="question-number">
+                    Q{{i + 1}}
+                </div>
+
+                <div class="question">
+                    {{ item.question }}
+                </div>
+
+                <div class="expand-btn" (click)="openFaq(i)">
+                    <div [class.button-active]="(currentFaqIndex | async) === i">
+                        <svg class="svg-rotate__icon" width="18px" height="18px" viewBox="0 0 357 357">
+              <g id="add">
+                <path d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z" />
+              </g>
+            </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-answer-wrapper" [class.faq-inactive]="(currentFaqIndex | async) !== i">
+                {{ item.answer }}
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- Accordian End -->
+</div>
